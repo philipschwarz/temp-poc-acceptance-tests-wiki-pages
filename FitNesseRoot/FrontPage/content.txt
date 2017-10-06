@@ -8,6 +8,7 @@ EnvironmentVariablesInApplicationConfig
 SuiteSetUp
 
 Thu  5 Oct 2017 17:14:44 BST
+FOO
 
 
 |'''To Learn More...'''                                                                                    |
