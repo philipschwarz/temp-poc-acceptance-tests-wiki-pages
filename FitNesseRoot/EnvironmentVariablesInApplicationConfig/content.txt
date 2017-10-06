@@ -1,0 +1,43 @@
+!contents -R2 -g -p -f -h
+
+!define TEST_SYSTEM {slim}
+
+
+You can use these tests to verify that the necessary values of environment variables are being successfully plugged into src/main/resources/application.conf.
+This test verifies that things work for four sample configuration properties that use four environment variables.
+
+Before running the test, stop Fitnesse, run the four commands below, and then start Fitnesse again (from the same command line where you executed the commands).
+
+export FITNESSE_WIKI_PAGES_GIT_REPOSITORY=someRepositoryName
+export FITNESSE_WIKI_PAGES_GIT_BRANCH=someBranchName
+export RABBITMQ_EXCHANGE=someExchangeName
+export FILE_STORAGE_OUTPUT_URI=someBaseUrl
+
+The first two tests verify that the values of the following properties are someRepositoryName and someBaseUrl respectively:
+
+fitnesse {
+..wiki-pages {
+....git-repository = ${?FITNESSE_WIKI_PAGES_GIT_REPOSITORY}
+....git-branch = ${?FITNESSE_WIKI_PAGES_GIT_BRANCH}
+..}
+}
+
+If the indicated environment variables are defined and have the right value, then the configuration parameters that refer to the variables will have the expected values and the tests will pass.
+If the variables are not defined, then the tests will encounter errors because configuration parameters depend on undefined variables, e.g. java.lang.IllegalArgumentException: requirement failed: missing or null fitnesse.wiki-pages.git-repository.
+If the variables are defined but don't have the expected values then the tests will fail.
+
+|com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture|
+|# config property|# environment variable it references|fitnesseWikiPagesGitRepository?|
+|fitnesse.wiki-pages.git-repository|FITNESSE_WIKI_PAGES_GIT_REPOSITORY|someRepositoryName|
+
+|com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture|
+|# config property|# environment variable it references|fitnesseWikiPagesGitBranch?|
+|fitnesse.wiki-pages.git-branch|FITNESSE_WIKI_PAGES_GIT_BRANCH|someBranchName|
+
+|com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture|
+|# config property|# environment variable it references|rabbitmqTopicExchangeName?|
+|rabbitmq.topic-exchange-name|RABBITMQ_EXCHANGE|someExchangeName|
+
+|com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture|
+|# config property|# environment variable it references|fileStorageBaseUrl?|
+|file-storage.base-url|FILE_STORAGE_OUTPUT_URI|someBaseUrl|

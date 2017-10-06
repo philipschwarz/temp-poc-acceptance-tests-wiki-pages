@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20160618</FitNesseVersion>
+  <rootPath>EnvironmentVariablesInApplicationConfig</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2017-10-05T10:52:45+01:00</date>
+    <runTimeInMillis>43</runTimeInMillis>
+    <content></content>
+    <relativePageName>SuiteSetUp</relativePageName>
+          </result>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>8</exceptions>
+    </counts>
+    <date>2017-10-05T10:52:45+01:00</date>
+    <runTimeInMillis>104</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;!pomFile pom.xml&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;You can use these tests to verify that the necessary values of environment variables are being successfully plugged into src/main/resources/application.conf.&lt;br/&gt;This test verifies that things work for four sample configuration properties that use four environment variables.&lt;br/&gt;&lt;br/&gt;Before running the test, stop Fitnesse, run the four commands below, and then start Fitnesse again (from the same command line where you executed the commands).&lt;br/&gt;&lt;br/&gt;export FITNESSE_WIKI_PAGES_GIT_REPOSITORY=someRepositoryName&lt;br/&gt;export FITNESSE_WIKI_PAGES_GIT_BRANCH=someBranchName&lt;br/&gt;export RABBITMQ_EXCHANGE=someExchangeName&lt;br/&gt;export FILE_STORAGE_OUTPUT_URI=someBaseUrl&lt;br/&gt;&lt;br/&gt;The first two tests verify that the values of the following properties are someRepositoryName and someBaseUrl respectively:&lt;br/&gt;&lt;br/&gt;fitnesse {&lt;br/&gt;..wiki-pages {&lt;br/&gt;....git-repository = ${?FITNESSE_WIKI_PAGES_GIT_REPOSITORY}&lt;br/&gt;....git-branch = ${?FITNESSE_WIKI_PAGES_GIT_BRANCH}&lt;br/&gt;..}&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;If the indicated environment variables are defined and have the right value, then the configuration parameters that refer to the variables will have the expected values and the tests will pass.&lt;br/&gt;If the variables are not defined, then the tests will encounter errors because configuration parameters depend on undefined variables, e.g. java.lang.IllegalArgumentException: requirement failed: missing or null fitnesse.wiki-pages.git-repository.&lt;br/&gt;If the variables are defined but don't have the expected values then the tests will fail.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="3"&gt;com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture &lt;span class="error"&gt;Could not invoke constructor for com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# config property&lt;/td&gt;
+		&lt;td&gt;# environment variable it references&lt;/td&gt;
+		&lt;td&gt;fitnesseWikiPagesGitRepository?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;fitnesse.wiki-pages.git-repository&lt;/td&gt;
+		&lt;td&gt;FITNESSE_WIKI_PAGES_GIT_REPOSITORY&lt;/td&gt;
+		&lt;td&gt;someRepositoryName &lt;span class="error"&gt;The instance decisionTable_0.fitnesseWikiPagesGitRepository. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="3"&gt;com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture &lt;span class="error"&gt;Could not invoke constructor for com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# config property&lt;/td&gt;
+		&lt;td&gt;# environment variable it references&lt;/td&gt;
+		&lt;td&gt;fitnesseWikiPagesGitBranch?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;fitnesse.wiki-pages.git-branch&lt;/td&gt;
+		&lt;td&gt;FITNESSE_WIKI_PAGES_GIT_BRANCH&lt;/td&gt;
+		&lt;td&gt;someBranchName &lt;span class="error"&gt;The instance decisionTable_1.fitnesseWikiPagesGitBranch. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="3"&gt;com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture &lt;span class="error"&gt;Could not invoke constructor for com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# config property&lt;/td&gt;
+		&lt;td&gt;# environment variable it references&lt;/td&gt;
+		&lt;td&gt;rabbitmqTopicExchangeName?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;rabbitmq.topic-exchange-name&lt;/td&gt;
+		&lt;td&gt;RABBITMQ_EXCHANGE&lt;/td&gt;
+		&lt;td&gt;someExchangeName &lt;span class="error"&gt;The instance decisionTable_2.rabbitmqTopicExchangeName. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="3"&gt;com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture &lt;span class="error"&gt;Could not invoke constructor for com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# config property&lt;/td&gt;
+		&lt;td&gt;# environment variable it references&lt;/td&gt;
+		&lt;td&gt;fileStorageBaseUrl?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;file-storage.base-url&lt;/td&gt;
+		&lt;td&gt;FILE_STORAGE_OUTPUT_URI&lt;/td&gt;
+		&lt;td&gt;someBaseUrl &lt;span class="error"&gt;The instance decisionTable_3.fileStorageBaseUrl. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>EnvironmentVariablesInApplicationConfig</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='decisionTable_0_0', instruction='make', instanceName='decisionTable_0', className='com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_0_0</instructionId>
+                              <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Could not invoke constructor for com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture[0]</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_0_5', instruction='call', instanceName='decisionTable_0', methodName='fitnesseWikiPagesGitRepository', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_0_5</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>The instance decisionTable_0.fitnesseWikiPagesGitRepository. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_1_0</instructionId>
+                              <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Could not invoke constructor for com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture[0]</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_5', instruction='call', instanceName='decisionTable_1', methodName='fitnesseWikiPagesGitBranch', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_1_5</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>The instance decisionTable_1.fitnesseWikiPagesGitBranch. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_0', instruction='make', instanceName='decisionTable_2', className='com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_2_0</instructionId>
+                              <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Could not invoke constructor for com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture[0]</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_5', instruction='call', instanceName='decisionTable_2', methodName='rabbitmqTopicExchangeName', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_2_5</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>The instance decisionTable_2.rabbitmqTopicExchangeName. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_0', instruction='make', instanceName='decisionTable_3', className='com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_3_0</instructionId>
+                              <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Could not invoke constructor for com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture[0]</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_5', instruction='call', instanceName='decisionTable_3', methodName='fileStorageBaseUrl', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_3_5</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>The instance decisionTable_3.fileStorageBaseUrl. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/bin/java -cp /Users/philipschwarz/.m2/repository/org/fitnesse/fitnesse/20160618/fitnesse-20160618.jar fitnesse.slim.SlimService 8085</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>504</totalRunTimeInMillis>
+</testResults>
+

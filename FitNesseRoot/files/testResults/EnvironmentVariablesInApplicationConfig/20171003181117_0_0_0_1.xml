@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20160618</FitNesseVersion>
+  <rootPath>EnvironmentVariablesInApplicationConfig</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>3</exceptions>
+    </counts>
+    <date>2017-10-03T18:11:17+01:00</date>
+    <runTimeInMillis>104</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;div class="contents"&gt;
+        &lt;b&gt;Contents:&lt;/b&gt;
+        &lt;ul class="toc1"/&gt;&lt;ul class="toc1"/&gt;
+        &lt;/div&gt;
+        &lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+        &lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+        &lt;tr class="slimRowTitle"&gt;
+        &lt;td&gt;import&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="slimRowColor0"&gt;
+        &lt;td&gt;&lt;span class="pass"&gt;com.sefaira.common&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;br/&gt;&lt;table&gt;
+        &lt;tr class="slimRowTitle"&gt;
+        &lt;td colspan="2"&gt;com.sefaira.fitnesse.fixtures.EnvironmentVariablesInApplicationConfigFixture &lt;span
+        class="error"&gt;Could not invoke constructor for
+        com.sefaira.common.EnvironmentVariablesInApplicationConfigFixture[0]&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="slimRowTitle"&gt;
+        &lt;td&gt;fitnesseWikiPagesGitRepository?&lt;/td&gt;
+        &lt;td&gt;fitnesseWikiPagesGitBranch?&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="slimRowColor1"&gt;
+        &lt;td&gt;foo &lt;span class="error"&gt;The instance decisionTable_1.fitnesseWikiPagesGitRepository. does not
+        exist&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;bar &lt;span class="error"&gt;The instance decisionTable_1.fitnesseWikiPagesGitBranch. does not exist&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    </content>
+    <relativePageName>EnvironmentVariablesInApplicationConfig</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='com.sefaira.common'}</instruction>
+        <slimResult>pass(com.sefaira.common)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>com.sefaira.common</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='com.sefaira.common.EnvironmentVariablesInApplicationConfigFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_1_0</instructionId>
+                              <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Could not invoke constructor for com.sefaira.common.EnvironmentVariablesInApplicationConfigFixture[0]</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_5', instruction='call', instanceName='decisionTable_1', methodName='fitnesseWikiPagesGitRepository', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_1_5</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>The instance decisionTable_1.fitnesseWikiPagesGitRepository. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_6', instruction='call', instanceName='decisionTable_1', methodName='fitnesseWikiPagesGitBranch', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_1_6</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>The instance decisionTable_1.fitnesseWikiPagesGitBranch. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/bin/java -cp /Users/philipschwarz/.m2/repository/org/fitnesse/fitnesse/20160618/fitnesse-20160618.jar fitnesse.slim.SlimService 8085</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>417</totalRunTimeInMillis>
+</testResults>
+
